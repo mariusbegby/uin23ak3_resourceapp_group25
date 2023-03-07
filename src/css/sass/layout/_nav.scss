@@ -16,7 +16,7 @@ nav {
             color: $darker-cyan;
         }
 
-        .active {
+        &.active {
             background-color: $cyan;
             color: $white;
             border: 2px solid $cyan;
