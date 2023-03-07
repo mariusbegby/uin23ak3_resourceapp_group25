@@ -3,8 +3,8 @@ header {
     border: 2px solid $medium-grey;
     margin-top: 3rem;
     margin-bottom: 2rem;
-}
 
-header > h2 {
-    text-transform: uppercase;
+    h2 {
+        text-transform: uppercase;
+    }
 }

@@ -1,27 +1,29 @@
-nav > a {
-    border: 2px solid $medium-grey;
-    border-bottom: 2px solid $light-grey;
-    padding: 1rem 1.5rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $grey;
-    margin: 0;
-    margin-right: 0.5rem;
-    display: inline-block;
-    background-color: $light-grey;
-}
+nav {
+    a {
+        border: 2px solid $medium-grey;
+        border-bottom: 2px solid $light-grey;
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $grey;
+        margin: 0;
+        margin-right: 0.5rem;
+        display: inline-block;
+        background-color: $light-grey;
 
-nav > a:hover {
-    cursor: pointer;
-    color: $darker-cyan;
-}
+        &:hover {
+            cursor: pointer;
+            color: $darker-cyan;
+        }
 
-nav > a.active {
-    background-color: $cyan;
-    color: $white;
-    border: 2px solid $cyan;
-}
+        .active {
+            background-color: $cyan;
+            color: $white;
+            border: 2px solid $cyan;
 
-nav > a.active:hover {
-    background-color: $darker-cyan;
+            &:hover {
+                background-color: $darker-cyan;
+            }
+        }
+    }
 }
