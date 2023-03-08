@@ -1,21 +1,34 @@
 import './css/main.css';
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Main from './components/Main';
-import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Resources from './components/Resources';
 
 function App() {
-    const [activeCategory, setActiveCategory] = useState('HTML');
-
     return (
-        <div className='container'>
-            <Header></Header>
-
-            <Nav activeCategory={activeCategory} setActiveCategory={setActiveCategory}></Nav>
-
-            <Main activeCategory={activeCategory}></Main>
-        </div>
+        <Routes>
+            <Route index element={<Resources activeCategory='HTML'/>} />
+            <Route path='css' element={<Resources activeCategory='CSS' />} />
+            <Route path='javascript' element={<Resources activeCategory='JavaScript' />} />
+            <Route path='react' element={<Resources activeCategory='React' />} />
+            <Route path='sanity' element={<Resources activeCategory='Sanity' />} />
+        </Routes>
     );
 }
 
 export default App;
+
+// <Resources activeCategory={activeCategory}></Resources>
+
+/*
+
+ <div className='container'>
+                <Header></Header>
+
+                <Nav
+                    activeCategory={activeCategory}
+                    setActiveCategory={setActiveCategory}></Nav>
+
+                <Resources activeCategory={activeCategory}></Resources>
+                
+                
+            </div>
+ */
